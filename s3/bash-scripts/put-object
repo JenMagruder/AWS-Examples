@@ -1,11 +1,11 @@
 #!/bin/bash
-
+#exit immediately if any command returns a non-zero status
 set -e
 # where we'll store these files
 OUTPUT_DIR="./temp"
 # let's create output folder
 mkdir -p $OUTPUT_DIR
-
+#remove the foler if it already exists
 rm -rf $OUTPUT_DIR/*
 
 #generate a random number

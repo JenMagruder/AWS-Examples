@@ -1,1 +1,21 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+set -e
+# where we'll store these files
+OUTPUT_DIR="./temp"
+# let's create output folder
+mkdir -p $OUTPUT_DIR
+
+rm -rf $OUTPUT_DIR/*
+
+#generate a random number
+#to determine hwo many files to create
+NUM_FILES=$((RANDOM % 6 + 5))
+#Generate a random filename
+for i in $(seq 1 $NUM_FILES); do
+    FILE_NAME="$OUTPUT_DIR/file_$i.txt"
+    head -c 100 </dev/urandom > $FILE_NAME
+    echo "Created $FILE_NAME"
+done
+
+tree $OUTPUT_DIR

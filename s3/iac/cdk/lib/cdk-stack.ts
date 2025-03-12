@@ -1,6 +1,5 @@
-import { Duration, Stack, StackProps } from 'aws-cdk-lib';
+import { Stack, StackProps } from 'aws-cdk-lib';
 import * as s3 from 'aws-cdk-lib/aws-s3';
-import { S3 } from 'aws-cdk-lib/aws-ses-actions';
 import { Construct } from 'constructs';
 
 export class CdkStack extends Stack {
